@@ -6,6 +6,8 @@ new Set([1,1,2,2,3,4])
 ```
 
 The preceeding code returns:
+*Set(4) {1, 2, 3, 4}*
+Which is a set where 1:1, 2:2, 3:3, 4:$
 
 ​
 ## Quick Question #2
@@ -15,7 +17,8 @@ What does the following code return?
 ```
 
 The preceeding code returns:
-
+*'ref'*
+All repeating letters were removed in the join.
 
 ## Quick Questions #3
 What does the Map m look like after running the following code?
@@ -26,7 +29,9 @@ m.set([1,2,3], false);
 ```
 
 The preceeding code returns:
-
+*Map(2) {Array(3) => true, Array(3) => false}*
+Which translates to the following:
+*{[1,2,3] => true, [1,2,3] => false}*
 
 ## hasDuplicate
 Write a function called hasDuplicate which accepts an array and returns true or false if that array contains a duplicate
@@ -36,7 +41,16 @@ hasDuplicate([1,5,-1,4]) // false
 ```
 
 Student Function:
-
+```
+function hasDuplicate(arr){
+    let setArr=new Set(arr);
+    if(setArr.size!=arr.length){
+      return true;
+    }else{
+      return false;
+    } 
+  }
+```
 
 ## vowelCount
 Write a function called vowelCount which accepts a string and returns a map where the keys are numbers and the values are the count of the vowels in the string.
