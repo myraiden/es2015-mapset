@@ -60,3 +60,24 @@ vowelCount('Colt') // Map { 'o' => 1 }
 ```
 
 StudentFunction:
+```
+function vowelCount(str){
+    let vowels=new Set("aeiou");
+    let strArray=[...str];
+    let mapVowels=new Map();
+    
+    vowels.forEach(letter=>{
+        let count=0;    
+        strArray.forEach(char=>{
+            if(char==letter){
+                count+=1;
+            }
+        })
+        if(count>0){
+            mapVowels.set(`${letter}`,`${count}`);
+        }
+    })
+
+    return mapVowels;
+}
+```
